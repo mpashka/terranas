@@ -1,4 +1,4 @@
-# TL;DR [Zigbee kernel module for Terramaster F4-210 NAS]()
+# TL;DR [Zigbee kernel module for Terramaster F4-210 NAS](https://github.com/mpashka/terranas/releases/download/0.0.1/cdc-acm.ko)
 * Enable ssh access on your NAS
 * Connect to your NAS through ssh
 * Start root session: `sudo su -` and enter your password to gain root access (shell prompt must change from `$` to `#`)
@@ -29,7 +29,7 @@ In order to find out the reason you have to check kernel messages by applying co
   and adds ARCH_RTD129x platfrom support into `arch/arm64/Kconfig.platforms`
 * Run `make menuconfig` to create default config, exit, save it and then run `make ARCH=x86_64 scripts` to create
   build scripts. If you see `error: code model kernel does not support PIC mode` during compilation then check 
-  [Apply PIC patch]() section
+  [Apply PIC patch](#apply-pic-patch) section
 * Put [arm64 config](.config) into `linux-4.4.18/` dir
 * Download aarch64 toolchain. In order to use appropriate toolchain you have to provide prefix either by applying
   `CROSS_COMPILE=_prefix_` parameter to make or specifying `CONFIG_CROSS_COMPILE` parameter in `.config`. If your 
