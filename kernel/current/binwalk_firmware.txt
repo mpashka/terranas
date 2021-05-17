@@ -1,0 +1,9 @@
+$ binwalk firmware.img 
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             LZMA compressed data, properties: 0x6D, dictionary size: 8388608 bytes, uncompressed size: 8294400 bytes
+327680        0x50000         LZMA compressed data, properties: 0x6D, dictionary size: 8388608 bytes, uncompressed size: 913328 bytes
+1769472       0x1B0000        Flattened device tree, size: 59310 bytes, version: 17
+1835008       0x1C0000        LZMA compressed data, properties: 0x6D, dictionary size: 1048576 bytes, uncompressed size: 17186064 bytes
+9699328       0x940000        xz compressed data

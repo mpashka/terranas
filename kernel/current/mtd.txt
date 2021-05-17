@@ -1,0 +1,9 @@
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00020000 00001000 "factory"
+mtd1: 00080000 00001000 "uboot"
+mtd2: 00050000 00001000 "logo"
+mtd3: 00160000 00001000 "afw"
+mtd4: 00010000 00001000 "dtb"
+mtd5: 00780000 00001000 "kernel"
+mtd6: 00580000 00001000 "initrd"

@@ -1,0 +1,63 @@
+--- arch/arm64/include/asm/uaccess.h	2016-08-16 10:31:54.000000000 +0300
++++ ../linux-4.4.18.my/arch/arm64/include/asm/uaccess.h	2021-05-14 12:14:23.295621670 +0300
+@@ -247,15 +247,19 @@
+ 		-EFAULT;						\
+ })
+ 
+-extern unsigned long __must_check __copy_from_user(void *to, const void __user *from, unsigned long n);
+-extern unsigned long __must_check __copy_to_user(void __user *to, const void *from, unsigned long n);
++extern unsigned long __must_check __arch_copy_from_user(void *to, const void __user *from, unsigned long n);
++extern unsigned long __must_check __arch_copy_to_user(void __user *to, const void *from, unsigned long n);
+ extern unsigned long __must_check __copy_in_user(void __user *to, const void __user *from, unsigned long n);
+ extern unsigned long __must_check __clear_user(void __user *addr, unsigned long n);
+ 
++#define __copy_to_user __arch_copy_to_user
++#define __copy_from_user __arch_copy_from_user
++
++
+ static inline unsigned long __must_check copy_from_user(void *to, const void __user *from, unsigned long n)
+ {
+ 	if (access_ok(VERIFY_READ, from, n))
+-		n = __copy_from_user(to, from, n);
++		n = __arch_copy_from_user(to, from, n);
+ 	else /* security hole - plug it */
+ 		memset(to, 0, n);
+ 	return n;
+@@ -264,7 +268,7 @@
+ static inline unsigned long __must_check copy_to_user(void __user *to, const void *from, unsigned long n)
+ {
+ 	if (access_ok(VERIFY_WRITE, to, n))
+-		n = __copy_to_user(to, from, n);
++		n = __arch_copy_to_user(to, from, n);
+ 	return n;
+ }
+ 
+@@ -275,8 +279,8 @@
+ 	return n;
+ }
+ 
+-#define __copy_to_user_inatomic __copy_to_user
+-#define __copy_from_user_inatomic __copy_from_user
++#define __copy_to_user_inatomic __arch_copy_to_user
++#define __copy_from_user_inatomic __arch_copy_from_user
+ 
+ static inline unsigned long __must_check clear_user(void __user *to, unsigned long n)
+ {
+--- arch/arm64/Kconfig.platforms	2016-08-16 10:31:54.000000000 +0300
++++ ../linux-4.4.18.my/arch/arm64/Kconfig.platforms	2021-05-13 15:16:16.247434443 +0300
+@@ -128,4 +128,15 @@
+    help
+      This enables support for Xilinx ZynqMP Family
+ 
++config ARCH_RTD129x
++	bool "Realtek RTD129x SoC Family"
++	select ARM_GIC
++	select CLKSRC_OF
++	select PINCTRL
++	select RTK_PLATFORM
++	select PM_OPP
++	select IRDA
++	help
++	  This enables support for Realtek RTD129x SoC Family
++
+ endmenu

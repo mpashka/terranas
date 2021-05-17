@@ -1,0 +1,57 @@
+$ cat /proc/devices
+Character devices:
+  1 mem
+  4 /dev/vc/0
+  4 tty
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  7 vcs
+ 10 misc
+ 13 input
+ 67 coda
+ 89 i2c
+ 90 mtd
+128 ptm
+136 pts
+180 usb
+189 usb_device
+234 ir_cdev
+240 RPC
+245 led_drv
+246 hidraw
+247 uio
+248 isert_scst
+249 iscsi-scst-ctl
+250 scst_user
+251 scst_event
+252 bsg
+253 watchdog
+254 rtc
+
+Block devices:
+  1 ramdisk
+259 blkext
+  7 loop
+  8 sd
+  9 md
+ 31 mtdblock
+ 65 sd
+ 66 sd
+ 67 sd
+ 68 sd
+ 69 sd
+ 70 sd
+ 71 sd
+128 sd
+129 sd
+130 sd
+131 sd
+132 sd
+133 sd
+134 sd
+135 sd
+252 device-mapper
+253 bcache
+254 mdp

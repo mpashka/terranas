@@ -1,0 +1,22 @@
+$ uname -a
+Linux TNAS-BA68 4.4.18-g8bcbd8a-dirty #1327 SMP Mon Aug 31 11:55:52 CST 2020 aarch64 GNU/Linux
+
+$ cat /etc/openwrt_release
+DISTRIB_ID='OpenWrt'
+DISTRIB_RELEASE='Chaos Calmer'
+DISTRIB_REVISION='r48422'
+DISTRIB_CODENAME='chaos_calmer'
+DISTRIB_TARGET='rtd1295/nas_spi'
+DISTRIB_DESCRIPTION='OpenWrt Chaos Calmer 15.05.1'
+DISTRIB_TAINTS='no-all glibc busybox'
+
+$ cat /proc/cmdline
+rdinit=/sbin/init  mtdparts=RtkSFC:128k(factory),512k(uboot),320k(logo),1408k(afw),64k(dtb),7680k(kernel),5632k(initrd)  earlycon=uart8250,mmio32,0x98007800 console=ttyS0,115200 loglevel=7 U-boot=2015.07 (Nov 27 2019 - 14:31:13)
+
+$ cat /etc/opkg.conf
+dest root /
+dest ram /tmp
+lists_dir ext /var/opkg-lists
+option overlay_root /overlay
+option check_signature 1
+

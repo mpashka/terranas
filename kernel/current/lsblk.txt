@@ -1,0 +1,22 @@
+# lsblk
+NAME          MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINT
+sda             8:0    1   240M  0 disk  
+`-sda1          8:1    1   238M  0 part  /mnt/bootdev
+sdb             8:16   0  74.5G  0 disk  
+|-sdb1          8:17   0   285M  0 part  
+|-sdb2          8:18   0   2.9G  0 part  
+| `-md9         9:9    0   2.9G  0 raid1 /
+|-sdb3          8:19   0   1.9G  0 part  
+| `-md8         9:8    0   1.9G  0 raid1 [SWAP]
+`-sdb4          8:20   0  69.5G  0 part  
+  `-md0         9:0    0  69.4G  0 raid1 
+    `-vg0-lv0 252:0    0  69.4G  0 lvm   /mnt/md0
+sdc             8:32   0 149.1G  0 disk  
+`-sdc1          8:33   0 149.1G  0 part  
+mtdblock0      31:0    0   128K  0 disk  
+mtdblock1      31:1    0   512K  0 disk  
+mtdblock2      31:2    0   320K  0 disk  
+mtdblock3      31:3    0   1.4M  0 disk  
+mtdblock4      31:4    0    64K  0 disk  
+mtdblock5      31:5    0   7.5M  0 disk  
+mtdblock6      31:6    0   5.5M  0 disk  
