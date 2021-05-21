@@ -92,6 +92,14 @@
     margin-left: 20px;
 }
 
+div.install_logs_container {
+    height: 90%;
+}
+
+#content pre {
+    overflow: auto;
+    height: inherit;
+}
 
 .button_icon10 i+img {
     width: 20px;

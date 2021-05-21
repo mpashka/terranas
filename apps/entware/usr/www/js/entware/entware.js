@@ -33,7 +33,7 @@ $(() => {
             url:'/lib/entware/api.php',
             type:'get',
             data:{'fn':'install'},
-            dataType:'text',
+            dataType:'json',
             beforeSend: (/*jqXHR, settings*/) => {
                 $installSpinner.show();
                 $installIcon.hide();
@@ -43,9 +43,9 @@ $(() => {
                 $installSpinner.hide();
                 clearInterval(installStatusUpdate);
             },
-            success: (resp/*, textStatus, jqXHR*/) => {
+            success: (data/*, textStatus, jqXHR*/) => {
                 $installIcon.removeClass();
-                $installIcon.addClass(resp === "0" ? "icon-ok-circle" : "icon-remove-circle");
+                $installIcon.addClass(data.result === 0 ? "icon-ok-circle" : "icon-remove-circle");
                 $installIcon.show();
                 readLogs();
             }

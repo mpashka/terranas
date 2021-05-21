@@ -4,4 +4,74 @@ auth = "m_pashka" #app developer
 version = "1.0.1" #app version
 descript = Software repository for embedded devices with 2500+ packages.
 
-#[ru-RU] # Russian
+[zh-cn] #Chinese simplied
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[zh-hk] #Chinese tranditional
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[de-de] #German
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[fr-fr] #Franch
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[ja-jp] #Japanese
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[ko-kr] #Korean
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[es-es] #Spanish
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[it-it] #Italia
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[hu-hu] #Hungrian
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[pl-pl] #Polish
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[tr-tr] #Turkish
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+[ru-ru] # Russian
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.

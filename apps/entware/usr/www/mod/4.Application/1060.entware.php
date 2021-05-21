@@ -7,9 +7,9 @@
     <link href="/css/entware/entware.css" type="text/css" rel="stylesheet">
     <link href="/tos/static/style/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
     <script src="/js/jquery.js"></script>
-<!--    <script src="/js/wbox.js"></script>-->
-<!--    <script src="/js/layer/layer.js"></script>-->
-<!--    <script src="/js/common.js?v="></script>-->
+    <script src="/js/wbox.js"></script>
+    <script src="/js/layer/layer.js"></script>
+    <script src="/js/common.js?v="></script>
     <script src="/js/entware/entware.js"></script>
     <link rel="stylesheet" href="/js/layer/skin/default/layer.css?v=3.0.11110" id="layuicss-skinlayercss">
 </head>
@@ -52,7 +52,7 @@
                 </button>
                 <br>
                 <div class="info_title">Logs</div>
-                <div style="overflow-y: scroll">
+                <div class="install_logs_container">
                     <pre data-id="install_logs">
                     </pre>
                 </div>

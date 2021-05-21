@@ -13,13 +13,15 @@ switch ($fn) {
         $output = null;
         $retval = null;
         exec('/usr/local/entware/bin/install_wrap.sh', $output, $retval);
-        if ($retval != 0) {
-            $log = $retval;
-        }
-        break;
+        header('Content-type: application/json');
+        echo json_encode([
+            'result' => $retval,
+            'output' => $output]);
+        return;
 
     default:
         $log = "Unknown action $fn";
 }
 
+header('Content-type: text/plain');
 echo($log);
