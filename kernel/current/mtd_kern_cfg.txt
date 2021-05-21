@@ -1,0 +1,16 @@
+dev:    size   erasesize location name
+mtd0: 00020000 00001000  00000000 "factory"
+mtd1: 00080000 00001000  00020000 "uboot"
+mtd2: 00050000 00001000  000A0000 "logo"
+mtd3: 00160000 00001000  000F0000 "afw"
+mtd4: 00010000 00001000  00250000 "dtb"
+mtd5: 00780000 00001000  00260000 "kernel"
+mtd6: 00580000 00001000  009E0000 "initrd"
+
+
+(580 5632 KB) SPI 1st rootfs size (in KB)
+(80  512 KB)  SPI uboot size (in KB)
+(780 7680 KB) SPI kernel size (in KB)
+(10  64 KB)   SPI kernel size (in KB)
+(160 1408 KB) SPI audio FW size (in KB)
+(50  320 KB)  SPI boot image size (in KB)

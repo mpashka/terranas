@@ -37,7 +37,7 @@ In order to find out the reason you have to check kernel messages by applying co
   with full path e.g. `/opt/toolchains/aarch64-linaro/bin/aarch64-linux-gnu-`.
   * Initially I've tried `gcc-aarch64-linux-gnu` from my
     current ubuntu distribution (`Ubuntu 21.04`). Install it by applying `sudo apt-get install --install-recommends gcc-aarch64-linux-gnu`
-    and use ```aarch64-linux-gnu-` cross compile prefix. 
+    and use `aarch64-linux-gnu-` cross compile prefix. 
   * [Linaro](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-a/downloads).
     I assume in order to compile on x86_64 host you have to download `x86_64 Linux hosted cross compilers` -> 
     `AArch64 GNU/Linux target (aarch64-none-linux-gnu)`
@@ -49,7 +49,7 @@ In order to find out the reason you have to check kernel messages by applying co
 
 
 # Apply PIC patch
-This step is needed if you see error like this: `code model kernel does not support PIC mode`.
+This step is needed if you see error like this: `code model kernel does not support PIC mode` during make phase.
 There is an issue -
 [kernel doesn't support PIC mode for compiling](https://askubuntu.com/questions/851433/kernel-doesnt-support-pic-mode-for-compiling).
 This is applicable for gcc 6+ versions where PIE (position independent executables) is enabled by default.

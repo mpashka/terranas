@@ -1,0 +1,7 @@
+[en-us] # English
+name = "Entware" #app title
+auth = "m_pashka" #app developer
+version = "1.0.1" #app version
+descript = Software repository for embedded devices with 2500+ packages.
+
+#[ru-RU] # Russian
