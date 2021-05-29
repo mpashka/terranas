@@ -63,6 +63,6 @@ Several [synology](https://www.synology.com/) products -
 * DS218play
 * DS118
 
-# [System info](kernel/Readme.md)
+# [System info](kernel/README.md)
 
 # [cdc-acm usb driver](kernel/cdc-acm-usbdriver.md)
