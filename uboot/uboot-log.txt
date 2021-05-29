@@ -1,0 +1,68 @@
+C1:80000000
+C2
+?
+C3h
+hwsetting size: 00000BE4
+C4
+f 
+5-5
+s_f
+5-5-2
+Goto FSBL: 0x10100000
+Welcome to FSBL ...
+[FSBL] Warm Boot: 0x00000000
+[FSBL] Secure: 0x0000BEEE
+[FSBL] Flash Type: 0x00000001
+[FSBL] DCache Enable: 0x00000000
+********** FW_TYPE_BOOTCODE **********
+    FW Image to 0x00020000, size=0x0005A760 (0x0007A760)
+    FW Image fr 0x88121480 
+md copy audio bin
+j 64b
+
+
+U-Boot 2015.07 (Nov 27 2019 - 14:31:13 +0800)
+
+CPU  : Cortex-A53 Quad Core - AARCH64
+Board: Realtek QA Board
+DRAM:  2 GiB
+Watchdog: Disabled
+mapping memory 0x20000000-0x40000000 non-cached
+flushing dcache successfully.
+nor flash id [0x00ef4018]
+sector 256k en: 0
+sector  64k en: 1
+sector  32k en: 1
+sector   4k en: 1
+page_program  : 1
+max capacity  : 0x01000000
+spi type name : WINBOND_W325Q128BV_128Mbit
+Factory: NOR
+*** rtkspi_read32 345, tar 0x078800b0, src 0x88110000, len 0x00000200
+*** rtkspi_read32 345, tar 0x078802c0, src 0x88112800, len 0x00000200
+*** rtkspi_read32 345, tar 0x078800b0, src 0x88118000, len 0x00000200
+*** rtkspi_read32 345, tar 0x07000000, src 0x88110000, len 0x00002800
+Factory: pp:0, seq#:0x1, size:0x2800
+------------tmp/factory/000BootParam.h found
+[logo]src w/h=1920/1080 dst w/h=3840/2160
+*** rtkspi_read32_md 422, tar 0x000eff9c, src 0x88100000, len 0x00000008
+*** rtkspi_read32_md 422, tar 0x000effa0, src 0x88100000, len 0x00010000
+In:    serial
+Out:   serial
+Err:   serial
+HDMITx_HPD=False
+------------can't find tmp/factory/video_rpc.bin
+tv_system=25 mode=1
+==== DP not detect ====
+RTK_set_power_saving_config:Default POWERE_ON_S5 not set
+Net:   Realtek PCIe GBE Family Controller mcfg = 0024
+dev->name=r8168#0
+Checking default environment
+Hit Esc or Tab key to enter console mode or rescue linux:  0 
+------------can't find tmp/factory/recovery
+
+Press Esc Key
+
+Enter console mode, disable watchdog ...
+
+Realtek> 

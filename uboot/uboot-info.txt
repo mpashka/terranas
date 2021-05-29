@@ -1,0 +1,88 @@
+Realtek> base
+Base Address: 0x00000000
+
+
+Realtek> bdinfo
+arch_number = 0xFFFFFFFFFFFFFFFF
+boot_params = 0xFFFFFFFFFFFFFFFF
+DRAM bank   = 0x00000000
+-> start    = 0x00000000
+-> size     = 0x40000000
+ethaddr     = 6c:bf:b5:01:ba:68
+ip_addr     = 10.18.13.58
+baudrate    = 115200 bps
+TLB addr    = 0x7FFF0000
+*** bdinfo pll ***
+SCPU   PLL  = 1600 MHz
+SCPU        =  800 MHz
+ACPU   PLL  =  549 MHz
+ACPU        =  549 MHz
+VCPU1  PLL  =  594 MHz
+VCPU2  PLL  =  675 MHz
+DDSA   PLL  =  432 MHz
+DDSB   PLL  =  432 MHz
+BUS    PLL  =  256 MHz
+BUS_H  PLL  =  459 MHz
+GPU    PLL  =  449 MHz
+VODMA  PLL  =  405 MHz
+*** bdinfo ddr ***
+DDR        =  1866 MT/s (0x1f)
+DC0 DDR4, total size is 4Gb(x16)x2=8Gb
+DDR        =  1866 MT/s (0x1f)
+DC1 DDR4, total size is 4Gb(x16)x2=8Gb
+
+
+Realtek> flinfo
+
+
+Realtek> md
+md - memory display
+
+Usage:
+md [.b, .w, .l, .q] address [# of objects]
+
+
+Realtek> printenv
+aconstat=1
+audio_loadaddr=0x01b00000
+baudrate=115200
+bootcmd=bootr
+bootcodeimgaddr=0x20000
+bootcodeimgname=openwrt-rtd1295-bootcode.bin
+bootcodeimgsize=0x80000
+bootdelay=0
+ethact=r8168#0
+ethaddr=6c:bf:b5:01:ba:68
+ethprime=r8168#0
+fdt_high=0xffffffffffffffff
+fdt_loadaddr=0x02100000
+fwimgaddr=0xA0000
+fwimgname=openwrt-rtd1295-nas_spi-rtk-spi-8M-initrd-sysupgrade.bin
+fwimgsize=0xEC0000
+gatewayip=10.18.13.1
+ipaddr=10.18.13.58
+kernel_loadaddr=0x04000000
+loadaddr=0x01500000
+mtd_part=mtdparts=rtk_nand:
+netmask=255.255.255.0
+rescue_rootfs_loadaddr=0x02200000
+rootfs_loadaddr=0x02200000
+serverip=10.18.13.134
+sn=F4210-CN36-2048-000001
+upgrade_bootcode_tftp=tftp ${loadaddr} ${bootcodeimgname} && setenv upfwtftp 1; if test -n ${upfwtftp}; then rtkspi erase ${bootcodeimgaddr} ${bootcodeimgsize};rtkspi write ${bootcodeimgaddr} ${loadaddr} ${bootcodeimgsize}; reset; fi;
+upgrade_bootcode_usb=usb start;fatload usb 0:1 ${loadaddr} ${bootcodeimgname} && setenv upfwusb 1; if test -n ${upfwusb}; then rtkspi erase ${bootcodeimgaddr} ${bootcodeimgsize};rtkspi write ${bootcodeimgaddr} ${loadaddr} ${bootcodeimgsize}; reset; fi;
+upgrade_img_tftp=tftp ${loadaddr} ${fwimgname} && setenv upfwtftp 1; if test -n ${upfwtftp}; then rtkspi erase ${fwimgaddr} ${fwimgsize};rtkspi write ${fwimgaddr} ${loadaddr} ${fwimgsize}; fi;
+upgrade_img_usb=usb start;fatload usb 0:1 ${loadaddr} ${fwimgname} && setenv upfwusb 1; if test -n ${upfwusb}; then rtkspi erase ${fwimgaddr} ${fwimgsize};rtkspi write ${fwimgaddr} ${loadaddr} ${fwimgsize}; fi;
+
+Environment size: 1585/65532 bytes
+
+
+Realtek> showvar
+HUSH_VERSION=0.01
+
+
+Realtek> version
+
+U-Boot 2015.07 (Nov 27 2019 - 14:31:13 +0800)
+aarch64-openwrt-linux-gnu-gcc (OpenWrt/Linaro GCC 4.9-2015.06 r48422) 4.9.4
+GNU ld (GNU Binutils) 2.24.0

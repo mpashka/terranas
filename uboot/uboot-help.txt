@@ -1,0 +1,66 @@
+Realtek> ?
+?       - alias for 'help'
+base    - print or set address offset
+bdinfo  - print Board Info structure
+booti   - boot arm64 Linux Image image from memory
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootr   - boot realtek platform
+cachetest- Stress cache operation
+cmp     - memory compare
+cp      - memory copy
+date    - get/set/reset date & time
+dcache  - enable or disable data cache
+editenv - edit environment variable
+eeprom  - EEPROM sub-system
+env     - environment handling commands
+erase   - erase FLASH memory
+exit    - exit script
+factory - FACTORY sub system
+false   - do nothing, unsuccessfully
+fatinfo - print information about filesystem
+fatload - load binary file from a dos filesystem
+fatls   - list files in a directory (default /)
+fatsize - determine a file's size
+fatwrite- write file into a dos filesystem
+fdt     - flattened device tree utility commands
+flinfo  - print FLASH memory information
+gettime - get timer val elapsed
+gictest - Turn on GIC and send SGI to CPU
+go      - start application at address 'addr' or start running fw
+goru    - start rescue linux from usb
+gosd    - start boot from sd
+gosdb   - load bootcode from sd
+help    - print command description/usage
+icache  - enable or disable instruction cache
+keyset  - keyset - write keyset file into factory area
+loadb   - load binary file over serial line (kermit mode)
+loadx   - load binary file over serial line (xmodem mode)
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+md      - memory display
+mm      - memory modify (auto-incrementing address)
+mw      - memory write (fill)
+nm      - memory modify (constant address)
+ping    - send ICMP ECHO_REQUEST to network host
+pmic    - PMIC commands
+printenv- print environment variables
+protect - enable or disable FLASH write protection
+reset   - Perform RESET of the CPU
+rtkfat  - Realtek FAT32 format utility v1.0
+rtkspi  - spi flash utility
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+setexpr - set environment variable as the result of eval expression
+showvar - print local hushshell variables
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftp    - download image from TFTP server
+tftpput - TFTP put command, for uploading files to a server
+true    - do nothing, successfully
+uart_rw - UART related operation
+uart_write- for uart mp tool burn mac and sn key
+usb     - USB sub-system
+usbboot - boot from USB device
+version - print monitor, compiler and linker version

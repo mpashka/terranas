@@ -1,0 +1,32 @@
+chosen {
+	bootargs = "rdinit=/sbin/init  mtdparts=RtkSFC:128k(factory),512k(uboot),320k(logo),1408k(afw),64k(dtb),7680k(kernel),5632k(initrd)  earlycon=uart8250,mmio32,0x98007800 console=ttyS0,115200 loglevel=7";
+	linux,initrd-start = <0x2200000>;
+	linux,initrd-end = <0x2600000>;
+	compatible = "Realtek,rtk1295-cma_info";
+	cma-region-enable = <0x01>;
+	cma-region-info = <0x00 0x1000000 0x11000000>;
+};
+
+memory {
+	device_type = "memory";
+	reg = <0x00 0x80000000>;
+};
+
+mem_remap {
+	compatible = "Realtek,rtk1295-mem_remap";
+	#address-cells = <0x01>;
+	#size-cells = <0x01>;
+	ranges;
+
+	rbus {
+		reg = <0x98000000 0x200000>;
+	};
+
+	common {
+		reg = <0x1f000 0x1000>;
+	};
+
+	ringbuf {
+		reg = <0x1ffe000 0x4000>;
+	};
+};

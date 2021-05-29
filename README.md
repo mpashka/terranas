@@ -27,11 +27,9 @@ more functional.
 * [Saved downloads](https://drive.google.com/drive/folders/1oNhv_rqt5sSRDoS8HVc7HHRXaYsgglhv)
 
 Motherboard has landing places for 2 extra LAN connectors, HDMI connector, and several 
-other connectors, few switches and 2 microchips. Also J1 connector on the 
-mainboard looks exactly the same as serial connector of ZIDOO X9S and 
-[zidoo reboot instructions](http://forum.zidoo.tv/index.php?threads/how-to-flash-zidoo-x9s-unit.2959/page-8#post-38299)
-. So probably
-it is possible to connect serial, get access to u-boot console and load another kernel/OS.
+other connectors, few switches and 2 microchips. Also J1 connector on the
+mainboard is serial connector with 4 pin JST 2mm connector and pins as of [ZIDOO X9S](https://drive.google.com/file/d/1VVdpVPi_aK3qKlb6PJjlSa_LHUVrPk0L/view?usp=sharing)
+which can be used to access SPI prompt (press ctrl+q before NAS turn on) or [u-boot console](uboot/README.md) (press Esc before NAS turn on).
 
 
 # PCB microchips
@@ -66,3 +64,8 @@ Several [synology](https://www.synology.com/) products -
 # [System info](kernel/README.md)
 
 # [cdc-acm usb driver](kernel/cdc-acm-usbdriver.md)
+
+# [uboot info](uboot/README.md)
+
+# Other links
+* [zidoo unbrick instructions](http://forum.zidoo.tv/index.php?threads/how-to-flash-zidoo-x9s-unit.2959/page-8#post-38299)
